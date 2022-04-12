@@ -3,13 +3,80 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Место</title>
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 
-<body>
+<body class="page">
 
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="Логотип Место в России">
+  </header>
+
+  <main>
+    <section class="profile">
+      <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватарка пользователя">
+      <div class="profile__info">
+        <div class="profile__wrapper">
+          <h1 class="profile__title">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button" type="button"></button>
+        </div>
+        <p class="profile__description">Исследователь океана</p>
+      </div>
+      <button class="profile__add-button" type="button"></button>
+    </section>
+
+    <section class="cards">
+      <ul class="cards__list">
+        <li class="cards__item">
+          <img class="cards__picture" src="./images/karachaevsk.jpg" alt="Замок в горах Карачаевска">
+          <div class="cards__wrapper">
+            <h2 class="cards__title">Карачаевск</h2>
+            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+          </div>
+        </li>
+        <li class="cards__item">
+          <img class="cards__picture" src="./images/mountain-elbrus.jpg" alt="Гора Эльбрус">
+          <div class="cards__wrapper">
+            <h2 class="cards__title">Гора Эльбрус</h2>
+            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+          </div>
+        </li>
+        <li class="cards__item">
+          <img class="cards__picture" src="./images/dombau.jpg" alt="Лесистые горы в Домбае">
+          <div class="cards__wrapper">
+            <h2 class="cards__title">Домбай</h2>
+            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+          </div>
+        </li>
+        <li class="cards__item">
+          <img class="cards__picture" src="./images/mountain-elbrus.jpg" alt="Гора Эльбрус">
+          <div class="cards__wrapper">
+            <h2 class="cards__title">Гора Эльбрус</h2>
+            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+          </div>
+        </li>
+        <li class="cards__item">
+          <img class="cards__picture" src="./images/dombau.jpg" alt="Лесистые горы в Домбае">
+          <div class="cards__wrapper">
+            <h2 class="cards__title">Домбай</h2>
+            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+          </div>
+        </li>
+        <li class="cards__item">
+          <img class="cards__picture" src="./images/karachaevsk.jpg" alt="Замок в горах Карачаевска">
+          <div class="cards__wrapper">
+            <h2 class="cards__title">Карачаево-Черкесия</h2>
+            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__signature">&copy; 2022 Mesto Russia</p>
+  </footer>
 </body>
 
 </html>
