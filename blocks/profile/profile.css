@@ -4,3 +4,16 @@
   align-items: center;
   margin: 0 auto 50px;
 }
+
+@media (max-width: 936px) {
+  .profile {
+    width: calc(100% - (19px * 2));
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
+}

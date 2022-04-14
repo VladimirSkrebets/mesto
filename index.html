@@ -33,50 +33,65 @@
           <img class="cards__picture" src="./images/karachaevsk.jpg" alt="Замок в горах Карачаевска">
           <div class="cards__wrapper">
             <h2 class="cards__title">Карачаевск</h2>
-            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+            <button class="cards__icon-like" type="button"></button>
           </div>
         </li>
         <li class="cards__item">
           <img class="cards__picture" src="./images/mountain-elbrus.jpg" alt="Гора Эльбрус">
           <div class="cards__wrapper">
             <h2 class="cards__title">Гора Эльбрус</h2>
-            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+            <button class="cards__icon-like cards__icon-like_active" type="button"></button>
           </div>
         </li>
         <li class="cards__item">
           <img class="cards__picture" src="./images/dombau.jpg" alt="Лесистые горы в Домбае">
           <div class="cards__wrapper">
             <h2 class="cards__title">Домбай</h2>
-            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+            <button class="cards__icon-like" type="button"></button>
           </div>
         </li>
         <li class="cards__item">
           <img class="cards__picture" src="./images/mountain-elbrus.jpg" alt="Гора Эльбрус">
           <div class="cards__wrapper">
             <h2 class="cards__title">Гора Эльбрус</h2>
-            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+            <button class="cards__icon-like" type="button"></button>
           </div>
         </li>
         <li class="cards__item">
           <img class="cards__picture" src="./images/dombau.jpg" alt="Лесистые горы в Домбае">
           <div class="cards__wrapper">
             <h2 class="cards__title">Домбай</h2>
-            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+            <button class="cards__icon-like cards__icon-like_active" type="button"></button>
           </div>
         </li>
         <li class="cards__item">
           <img class="cards__picture" src="./images/karachaevsk.jpg" alt="Замок в горах Карачаевска">
           <div class="cards__wrapper">
             <h2 class="cards__title">Карачаево-Черкесия</h2>
-            <img class="cards__icon-like" src="./images/icon-like.svg" alt="Иконка Мне нравится">
+            <button class="cards__icon-like " type="button"></button>
           </div>
         </li>
       </ul>
     </section>
   </main>
+
   <footer class="footer">
     <p class="footer__signature">&copy; 2022 Mesto Russia</p>
   </footer>
+
+  <div class="popup">
+    <div class="popup__container">
+      <button class="popup__close"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form">
+        <input class="popup__user-name" type="text" value="Жак-Ив Кусто" placeholder="Имя">
+        <input class="popup__user-work" type="text" value="Исследователь океана" placeholder="О себе">
+        <button class="popup__submit" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 .cards__wrapper {
-  max-width: 246px;
+  max-width: calc(100% - 20px *2);
+  padding: 25px 20px 25px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 25px 20px 31px 20px;
 }

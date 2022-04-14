@@ -1,3 +1,4 @@
 .cards__picture {
-  width: 282px;
+  width: 100%;
+  object-fit: cover;
 }
