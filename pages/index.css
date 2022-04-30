@@ -25,6 +25,7 @@
 @import url(../blocks/cards/__item/cards__item.css);
 @import url(../blocks/cards/__icon-like/cards__icon-like.css);
 @import url(../blocks/cards/__icon-like/_active/cards__icon-like_active.css);
+@import url(../blocks/cards/__trash/cards__trash.css);
 /*Блок footer*/
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__signature/footer__signature.css);
