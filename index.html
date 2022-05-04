@@ -2,86 +2,87 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Место</title>
-	<link rel="stylesheet" href="./pages/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Место</title>
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
 
-	<header class="header">
-		<img class="header__logo" src="./images/logo.svg" alt="Логотип Место в России">
-	</header>
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="Логотип Место в России">
+  </header>
 
-	<main>
-		<section class="profile">
-			<img class="profile__avatar" src="./images/avatar.jpg" alt="Аватарка пользователя">
-			<div class="profile__info">
-				<div class="profile__wrapper">
-					<h1 class="profile__title">Жак-Ив Кусто</h1>
-					<button class="profile__edit-button" type="button"></button>
-				</div>
-				<p class="profile__description">Исследователь океана</p>
-			</div>
-			<button class="profile__add-button" type="button"></button>
-		</section>
+  <main>
+    <section class="profile">
+      <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватарка пользователя">
+      <div class="profile__info">
+        <div class="profile__wrapper">
+          <h1 class="profile__title">Vovka Skrebets</h1>
+          <button class="profile__edit-button" type="button"></button>
+        </div>
+        <p class="profile__description">Beginner Web Developer</p>
+      </div>
+      <button class="profile__add-button" type="button"></button>
+    </section>
 
-		<section class="cards" aria-label="Карточки красивых мест">
-			<ul class="cards__list">
+    <section class="cards" aria-label="Карточки красивых мест">
+      <ul class="cards__list">
 
-			</ul>
-		</section>
-	</main>
+      </ul>
+    </section>
+  </main>
 
-	<footer class="footer">
-		<p class="footer__signature">&copy; 2022 Mesto Russia</p>
-	</footer>
+  <footer class="footer">
+    <p class="footer__signature">&copy; 2022 Mesto Russia</p>
+  </footer>
 
-	<div class="popup popup_type_edit">
-		<div class="popup__container">
-			<button class="popup__close" type="button"></button>
-			<h2 class="popup__title">Редактировать профиль</h2>
-			<form class="popup__form" name="popup">
-				<input class="popup__user-name popup__input" type="text" value="Жак-Ив Кусто" placeholder="Имя">
-				<input class="popup__user-work popup__input" type="text" value="Исследователь океана" placeholder="О себе">
-				<button class="popup__submit" type="submit">Сохранить</button>
-			</form>
-		</div>
-	</div>
+  <div class="popup popup_type_edit">
+    <div class="popup__container">
+      <button class="popup__close" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form" name="popup">
+        <input class="popup__user-name popup__input" type="text" value="Жак-Ив Кусто" placeholder="Имя">
+        <input class="popup__user-work popup__input" type="text" value="Исследователь океана" placeholder="О себе">
+        <button class="popup__submit" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
 
-	<div class="popup popup_type_add">
-		<div class="popup__container">
-			<button class="popup__close" type="button"></button>
-			<h2 class="popup__title">Новое место</h2>
-			<form class="popup__form" name="popup">
-				<input class="popup__user-name popup__input" type="text" value="" placeholder="Название">
-				<input class="popup__user-work popup__input" type="text" value="" placeholder="Ссылка на картинку">
-				<button class="popup__submit" type="submit">Создать</button>
-			</form>
-		</div>
-	</div>
+  <div class="popup popup_type_add">
+    <div class="popup__container">
+      <button class="popup__close" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form" name="popup">
+        <input class="popup__user-name popup__input" type="text" value="" placeholder="Название">
+        <input class="popup__user-work popup__input" type="url" value="" placeholder="Ссылка на картинку">
+        <button class="popup__submit" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
 
-	<div class="popup popup_type_photo">
-		<figure class="popup__figure">
-			<button class="popup__close" type="button"></button>
-			<img class="popup__image">
-			<figcaption class="popup__caption"></figcaption>
-		</figure>
-	</div>
+  <div class="popup popup_type_photo">
+    <figure class="popup__figure">
+      <button class="popup__close" type="button"></button>
+      <img class="popup__image">
+      <figcaption class="popup__caption"></figcaption>
+    </figure>
+  </div>
 
-	<template class="cards-template">
-		<li class="cards__item">
-			<button class="cards__trash" type="button"></button>
-			<img class="cards__picture">
-			<div class="cards__wrapper">
-				<h2 class="cards__title"></h2>
-				<button class="cards__icon-like" type="button"></button>
-			</div>
-		</li>
-	</template>
+  <template class="cards-template">
+    <li class="cards__item">
+      <button class="cards__trash" type="button"></button>
+      <img class="cards__picture">
+      <div class="cards__wrapper">
+        <h2 class="cards__title"></h2>
+        <button class="cards__icon-like" type="button"></button>
+      </div>
+    </li>
+  </template>
 
-	<script src="./scripts/index.js"></script>
+  <script src="./scripts/cards.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 
 </html>
