@@ -1,9 +1,0 @@
-.popup__user-work {
-  margin-bottom: 44px;
-}
-
-@media (max-width: 768px) {
-  .popup__user-work {
-    margin-bottom: 39px;
-  }
-}

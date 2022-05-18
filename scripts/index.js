@@ -18,6 +18,7 @@ const formAddCards = popupAddCard.querySelector('.popup__form');
 const placeInput = formAddCards.querySelector('.popup__user-name');
 const linkInput = formAddCards.querySelector('.popup__user-work')
 
+
 // Функция открытия попапа
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -54,6 +55,9 @@ buttonOpenEditPopup.addEventListener('click', function () {
   openPopup(popupEditProfile);
   nameInput.value = userName.textContent;
   jobInput.value = userJob.textContent;
+  //скрываем показ ошибок при открытии попапа
+  hideInputError(popupEditProfile, nameInput);
+  hideInputError(popupEditProfile, jobInput);
 });
 
 // Обработчик события (при клике закрывает попап редактирования профиля)
@@ -67,6 +71,9 @@ formEditProfile.addEventListener('submit', submitEditForm);
 // Обработчик события (при клике открывает попап добавления карточек)
 buttonOpenAddPopup.addEventListener('click', function () {
   openPopup(popupAddCard);
+  //скрываем показ ошибок при открытии попапа
+  hideInputError(popupAddCard, placeInput);
+  hideInputError(popupAddCard, linkInput);
 });
 
 // Обработчик события (при клике зыкрвает попап добавления карточек)
@@ -144,4 +151,47 @@ const renderCards = (cardsData) => {
 
 initialCards.forEach((cardsData) => {
   renderCards(cardsData);
+});
+
+
+
+//закртыие на оверлей
+
+popupEditProfile.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(popupEditProfile);
+  };
+});
+
+popupAddCard.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(popupAddCard);
+  };
+});
+
+popupPhotoView.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(popupPhotoView);
+  };
+});
+
+
+//закртыие на escape
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Escape') {
+    closePopup(popupEditProfile);
+  }
+});
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Escape') {
+    closePopup(popupAddCard);
+  }
+});
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Escape') {
+    closePopup(popupPhotoView);
+  };
 });
