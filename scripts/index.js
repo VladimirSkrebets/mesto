@@ -1,4 +1,4 @@
-import { Card } from './Cards.js';
+import { Card } from './Card.js';
 import { FormValidator } from './FormValidator.js';
 import { initialCards } from './data.js';
 
@@ -25,7 +25,7 @@ const linkInput = formAddCards.querySelector('.popup__user-work')
 
 
 // Функция открытия попапа
- export function openPopup(popup) {
+function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closeByEscape);
 }
@@ -54,8 +54,6 @@ const addFormSubmitHandler = (evt) => {
 
   closePopup(popupAddCard);
   formAddCards.reset();
-  buttonSubmitAddPopup.setAttribute('disabled', 'bezRaznicy');
-  buttonSubmitAddPopup.classList.add('popup__submit_inactive');
 }
 
 // Обработчик события (при клике открывает попап редактирования профиля)
@@ -63,8 +61,7 @@ buttonOpenEditPopup.addEventListener('click', function () {
   nameInput.value = userName.textContent;
   jobInput.value = userJob.textContent;
   //скрываем показ ошибок при открытии попапа
-  formEditValidation.hideInputError(nameInput);
-  formEditValidation.hideInputError(jobInput);
+  formEditValidation.resetValidation();
   openPopup(popupEditProfile);
 });
 
@@ -79,10 +76,8 @@ formEditProfile.addEventListener('submit', submitEditForm);
 // Обработчик события (при клике открывает попап добавления карточек)
 buttonOpenAddPopup.addEventListener('click', function () {
   //скрываем показ ошибок при открытии попапа
-  formAddCardValidation.hideInputError(placeInput);
-  formAddCardValidation.hideInputError(linkInput);
-  placeInput.value = '';
-  linkInput.value = '';
+  formAddCards.reset();
+  formAddCardValidation.resetValidation();
   openPopup(popupAddCard);
 });
 
@@ -99,8 +94,17 @@ const cardsContainer = document.querySelector('.cards__list');
 
 
 const popupPhotoView = document.querySelector('.popup_type_photo');
+const popupPhotoImage = popupPhotoView.querySelector('.popup__image');
+const popupPhotoTitle = popupPhotoView.querySelector('.popup__caption')
 //Удаление popupPhoto
 const popupPhotoButtonClose = popupPhotoView.querySelector('.popup__close')
+
+function openPhotoPlace(title, link) {
+  popupPhotoImage.src = link;
+  popupPhotoImage.alt = title;
+  popupPhotoTitle.textContent = title;
+  openPopup(popupPhotoView);
+}
 
 popupPhotoButtonClose.addEventListener('click', function () {
  closePopup(popupPhotoView);
@@ -109,7 +113,7 @@ popupPhotoButtonClose.addEventListener('click', function () {
 //Класс Card
 
 const createCard = (cardsData) => {
-  const card = new Card(cardsData, '.cards-template');
+  const card = new Card(cardsData, '.cards-template', openPhotoPlace);
   return card.generateCard();
 }
 
