@@ -11,8 +11,8 @@ export class UserInfo {
     }
   }
 
-  setUserInfo(data) {
-    this._userName.textContent = data.name;
-    this._userDescription.textContent = data.description;
+  setUserInfo(description) {
+    this._userName.textContent = description.name;
+    this._userDescription.textContent = description.description;
   }
 }

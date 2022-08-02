@@ -5,11 +5,11 @@ export class Section {
     this._selectorContainer = selectorContainer;
   }
 
-  rendererElements() {
-    this._items.forEach(cardsData => this._renderer(cardsData));
+  renderElements() {
+    this._items.forEach(cardData => this._renderer(cardData));
   }
 
-  addItem(cardsData) {
-    this._selectorContainer.prepend(cardsData);
+  addItem(cardData) {
+    this._selectorContainer.prepend(cardData);
   }
 }

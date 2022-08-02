@@ -21,19 +21,19 @@ export class Card {
   }
 
   _likeCard() {
-    this._cardsLikeButton.classList.toggle('cards__icon-like_active');
+    this._cardLikeButton.classList.toggle('cards__icon-like_active');
   }
 
   _setEventListeners() {
     this._element.querySelector('.cards__trash').addEventListener('click', () => this._deleteCard());
-    this._cardsLikeButton = this._element.querySelector('.cards__icon-like');
-    this._cardsLikeButton.addEventListener('click', () => this._likeCard());
+    this._cardLikeButton.addEventListener('click', () => this._likeCard());
     this._cardImage.addEventListener('click', () => this._handleCardClick(this._name, this._link));
   }
 
   generateCard() {
     this._element = this._getTemplate();
     this._cardImage = this._element.querySelector('.cards__picture');
+    this._cardLikeButton = this._element.querySelector('.cards__icon-like');
     this._setEventListeners();
 
     this._element.querySelector('.cards__title').textContent = this._name;
