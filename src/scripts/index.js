@@ -1,10 +1,11 @@
-import { Card } from './Card.js';
-import { FormValidator } from './FormValidator.js';
+import './../pages/index.css';
+import { Card } from '../components/Card.js';
+import { FormValidator } from '../components/FormValidator.js';
 import { initialCards } from './data.js';
-import { Section } from './Section.js';
-import { PopupWithImage } from './PopupWithImage.js';
-import { PopupWithForm } from './PopupWithForm.js';
-import { UserInfo } from './UserInfo.js';
+import { Section } from '../components/Section.js';
+import { PopupWithImage } from '../components/PopupWithImage.js';
+import { PopupWithForm } from '../components/PopupWithForm.js';
+import { UserInfo } from '../components/UserInfo.js';
 
 // Переменные, в которых находятся адресса элементов для вызова и управления попапом изменения профиля
 const buttonOpenEditPopup = document.querySelector('.profile__edit-button');
