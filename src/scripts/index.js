@@ -7,6 +7,9 @@ import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
 
 import {
+  selectorPopupEdit,
+  selectorPopupAdd,
+  selectorPopupPhoto,
   initialCards,
   buttonOpenEditPopup,
   popupEditProfile,
@@ -16,7 +19,6 @@ import {
   profileDescription,
   buttonOpenAddPopup,
   popupAddCard,
-  popupPhotoView,
   cardsContainer,
   cardsTemplate,
   settings,
@@ -77,12 +79,12 @@ formAddCardValidation.enableValidation();
 
 
 //класс PopupWithImage
-const popupWithImage = new PopupWithImage(popupPhotoView);
-popupWithImage.setEventListeners()
+const popupWithImage = new PopupWithImage(selectorPopupPhoto);
+popupWithImage.setEventListeners();
 
 
 //класс PopupWithForm
-const popupWithFormEditProfile = new PopupWithForm(popupEditProfile, {
+const popupWithFormEditProfile = new PopupWithForm(selectorPopupEdit, {
   callBackSubmitForm: (data) => {
     userInfo.setUserInfo(data);
     popupWithFormEditProfile.close();
@@ -90,7 +92,7 @@ const popupWithFormEditProfile = new PopupWithForm(popupEditProfile, {
 });
 popupWithFormEditProfile.setEventListeners();
 
-const popupWithFormAddCard = new PopupWithForm(popupAddCard, {
+const popupWithFormAddCard = new PopupWithForm(selectorPopupAdd, {
   callBackSubmitForm: (data) => {
     const cardElement = createCard({name: data.place, link: data.link});
     renderCard(cardElement);
