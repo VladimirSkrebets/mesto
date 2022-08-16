@@ -1,6 +1,6 @@
 .cards__wrapper {
   max-width: calc(100% - 20px *2);
-  padding: 25px 20px 25px;
+  padding: 22px 20px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
