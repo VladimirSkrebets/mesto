@@ -7,10 +7,10 @@ export class FormValidator {
     this._inputErrorClass = settings.inputErrorClass;
     this._errorClass = settings.errorClass;
     this._inputList = Array.from(this._form.querySelectorAll(this._inputSelector));
+    this._buttonElement = this._form.querySelector(this._submitButtonSelector)
   }
 
   enableValidation() {
-    this._buttonElement = this._form.querySelector(this._submitButtonSelector)
     this._form.addEventListener('submit', (evt) => {
       evt.preventDefault();
     });
